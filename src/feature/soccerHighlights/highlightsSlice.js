@@ -14,7 +14,12 @@ export const fetchHighlights = createAsyncThunk('highlights/fetchHighlights', as
     { mode: 'cors' },
   );
   const data = await response.json();
-  console.log(data);
+  const modifiedData = data.filter(highlight => {
+    const date1 = new Date(highlight.date);
+    const date2 = new Date(new Date().setDate(new Date().getDate() - 1));
+    return date2 > date1
+  })
+  console.log(modifiedData);
 });
 
 const highlightsSlice = createSlice({
