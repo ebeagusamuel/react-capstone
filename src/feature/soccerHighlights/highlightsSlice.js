@@ -15,6 +15,9 @@ export const fetchHighlights = createAsyncThunk('highlights/fetchHighlights', as
     const date1 = new Date(highlight.date);
     const date2 = new Date(new Date().setDate(new Date().getDate() - 1));
     return date2 > date1;
+  }).map((highlight, index) => {
+    highlight.id = index + 1;
+    return highlight;
   });
   return modifiedData;
 });
