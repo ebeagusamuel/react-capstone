@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -8,18 +9,14 @@ const initialState = {
 };
 
 export const fetchHighlights = createAsyncThunk('highlights/fetchHighlights', async () => {
-  
-  const response = await fetch(
-    'https://www.scorebat.com/video-api/v1/',
-    { mode: 'cors' },
-  );
+  const response = await fetch('https://www.scorebat.com/video-api/v1/', { mode: 'cors' });
   const data = await response.json();
   const modifiedData = data.filter(highlight => {
     const date1 = new Date(highlight.date);
     const date2 = new Date(new Date().setDate(new Date().getDate() - 1));
-    return date2 > date1
-  })
-  console.log(modifiedData);
+    return date2 > date1;
+  });
+  return modifiedData;
 });
 
 const highlightsSlice = createSlice({
@@ -36,7 +33,7 @@ const highlightsSlice = createSlice({
     },
     [fetchHighlights.fulfilled]: (state, action) => {
       state.status = 'fulfilled';
-      state.news = action.payload;
+      state.highlights = action.payload;
     },
     [fetchHighlights.rejected]: (state, action) => {
       state.status = 'rejected';
@@ -45,5 +42,5 @@ const highlightsSlice = createSlice({
   },
 });
 
-export const { setCountry } = highlightsSlice.actions;
+export const { setLeague } = highlightsSlice.actions;
 export default highlightsSlice.reducer;
