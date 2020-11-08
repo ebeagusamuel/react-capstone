@@ -15,7 +15,7 @@ const Nav = () => {
   });
   const uniqueLeagues = Array.from(new Set(leagues));
   const leaguesOptions = uniqueLeagues.map(league => (
-    <option key={league} value={league === 'All' ? '' : league}>
+    <option key={league} value={league}>
       {league}
     </option>
   ));
@@ -32,6 +32,7 @@ const Nav = () => {
         <label htmlFor="selectLeague">
           Select league
           <select className="form-control ml-2" name="selectLeague" onChange={handleChange}>
+            {/* <option value="">All</option> */}
             {leaguesOptions}
           </select>
         </label>

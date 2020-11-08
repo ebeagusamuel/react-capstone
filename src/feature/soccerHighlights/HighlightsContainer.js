@@ -3,8 +3,17 @@ import { useSelector } from 'react-redux';
 import Highlight from './Highlight';
 
 const HighlightsContainer = () => {
-  // const D = useSelector(state => state.Highlights.country);
-  const highlights = useSelector(state => state.highlights.highlights);
+  const D = useSelector(state => state.highlights.league);
+  let highlights = [...useSelector(state => state.highlights.highlights)];
+
+  if (D) {
+    highlights = highlights.filter(highlight => {
+      const option1 = D.split(' ').slice(0, 2).join(' ');
+      const option2 = highlight.competition.name.split(' ').slice(0, 2).join(' ');
+      return option2.includes(option1);
+    });
+  }
+
   const highlghtItems = highlights.map(highlight => (
     <Highlight key={highlight.id} highlight={highlight} />
   ));
