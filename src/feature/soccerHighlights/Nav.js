@@ -32,7 +32,7 @@ const Nav = () => {
         <label htmlFor="selectLeague">
           Select league
           <select className="form-control ml-2" name="selectLeague" onChange={handleChange}>
-            {/* <option value="">All</option> */}
+            <option value="">All</option>
             {leaguesOptions}
           </select>
         </label>
