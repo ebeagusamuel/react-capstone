@@ -1,8 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { CommonLoading } from 'react-loadingg';
 import Highlight from './Highlight';
 
 const HighlightsContainer = () => {
+  const status = useSelector(state => state.highlights.status);
   const D = useSelector(state => state.highlights.league);
   let highlights = [...useSelector(state => state.highlights.highlights)];
 
@@ -17,6 +19,14 @@ const HighlightsContainer = () => {
   const highlghtItems = highlights.map(highlight => (
     <Highlight key={highlight.id} highlight={highlight} />
   ));
+
+  if (status === 'loading') {
+    return <CommonLoading />;
+  }
+
+  if (status === 'rejected') {
+    return <h2 className="mt-5 px-5 text-center">There was an error fetching data from the API, please refresh the page again</h2>;
+  }
 
   return <div className="py-3 d-flex flex-wrap justify-content-center">{highlghtItems}</div>;
 };
