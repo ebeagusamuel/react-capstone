@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+![Hireable](https://img.shields.io/badge/Hireable-yes-success) ![](https://img.shields.io/badge/Mobile--responsive-yes-green) ![](https://img.shields.io/badge/-Microverse%20projects-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SoccerHighlights 
 
-## Available Scripts
+> SoccerHiglihts is an application in which you can watch video highlights of your favorite teams and soccer games.
+> <br>
+> The APP was created  using React.js and Redux Toolkit
+> <br>
+> The application makes use of an API for fetching data: [ScoreBatAPI](https://www.scorebat.com/)
+> <br>
+> The app is fully mobile responsive and tested using Jest and the React Testing Library.
+> <br>
 
-In the project directory, you can run:
+## App functionality
 
-### `yarn start`
+- Users can view several games that have been played from different leagues.
+- Users can filter the games by league name.
+- Users can click on the button on the game cards to be routed to a different page where they can watch the video highlight of that particular game.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## This web app is live, you can check it here: [Live demo](http://soccer-highlights199.herokuapp.com/)
 
-### `yarn test`
+## Screenshots of the app.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![soccer-highlight-screenshot](https://user-images.githubusercontent.com/57847212/98553195-a5b24400-229f-11eb-9cb6-c224485a1c0e.png)
 
-### `yarn build`
+![soccer-highlight-screenshot2](https://user-images.githubusercontent.com/57847212/98553241-b6fb5080-229f-11eb-8cb0-403f82260c22.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
 
-### `yarn eject`
+- React.js
+- create-react-app
+- Redux Toolkit
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Testing
+- Jest
+- React Testing Library
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Prerequisities
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To get this project up and running locally, you must have [node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/) installed locally.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+**To get this project set up on your local machine, follow these simple steps:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Step 1**<br>
+Navigate through the local folder where you want to clone the repository and run<br>
+`git clone https://github.com/ebeagusamuel/react-capstone.git`. It will clone the repo to your local folder.<br>
+**Step 2**<br>
+Run `cd react-capstone`<br>
+**Step 3**<br>
+Run `npm install` to install the npm packages from the `package.json` file.<br>
+**Step 4**<br>
+Run `npm start` to start the webpack server, you can now navigate to `http://localhost:3000` to view the app. The server refreshes the app every time you make a change to a file used by it.<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tests
 
-### Code Splitting
+1. Open Terminal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Install dependencies (only if you did not install them previously):
 
-### Analyzing the Bundle Size
+   `npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Run the tests with the command:
 
-### Making a Progressive Web App
+   `npm test`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Authors
 
-### Advanced Configuration
+👤 **Ebeagu Samuel**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Email: [samuelebeagu@gmail.com](samuelebeagu@gmail.com)
+- Github: [ebeagusamuel](https://github.com/ebeagusamuel)
+- Twitter: [@ebeagu_samuel](https://twitter.com/ebeagu_samuel)
+- Linkedin: [Samuel Ebeagu](https://www.linkedin.com/in/ebeagusamuel/)
 
-### Deployment
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Our favourite contributions are those that help us improve the project, whether with a contribution, an issue, or a feature request!
 
-### `yarn build` fails to minify
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you've read this far....give us a ⭐️!
+
+## 📝 License
+
+This project is licensed by Microverse
+
+## Credits
+<div>Favicon gotten from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+[Microverse](https://www.microverse.org/) for the module of this project [Catalogue-of-Recipe]
