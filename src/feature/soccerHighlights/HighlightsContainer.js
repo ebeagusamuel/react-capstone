@@ -28,7 +28,7 @@ const HighlightsContainer = () => {
     return <h2 className="mt-5 px-5 text-center">There was an error fetching data from the API, please refresh the page again</h2>;
   }
 
-  return <div className="py-3 d-flex flex-wrap justify-content-center">{highlghtItems}</div>;
+  return <div className="py-3 mx-auto d-flex flex-wrap justify-content-center">{highlghtItems}</div>;
 };
 
 export default HighlightsContainer;
