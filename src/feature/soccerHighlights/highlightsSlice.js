@@ -27,7 +27,7 @@ const highlightsSlice = createSlice({
   initialState,
   reducers: {
     setLeague: (state, action) => {
-      console.log(action);
+      // console.log(action);
       state.league = action.payload;
     },
   },
