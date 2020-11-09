@@ -21,12 +21,12 @@ describe('setLeague action', () => {
   })
 });
 
-// describe('fetchHighlights', () => {
-//   it('it dispatches the correct action depending on the status of the request', async() => {
-//     const {payload} = await store.dispatch(fetchHighlights())
-//     const actions = store.getActions();
+describe('fetchHighlights', () => {
+  it('it dispatches the correct action depending on the status of the request', async() => {
+    const {payload} = await store.dispatch(fetchHighlights())
+    const actions = store.getActions();
 
-//     expect(actions[0].type).toBe(fetchHighlights.pending.type);
-//     expect(actions[1].type).toBe(fetchHighlights.fulfilled.type);
-//   })
-// })
+    expect(actions[0].type).toBe(fetchHighlights.pending.type);
+    expect(actions[1].type).toBe(fetchHighlights.fulfilled.type);
+  })
+})
