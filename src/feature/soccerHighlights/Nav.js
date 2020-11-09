@@ -31,7 +31,7 @@ const Nav = () => {
       <div className="form-inline">
         <label htmlFor="selectLeague">
           Select league
-          <select className="form-control ml-2" name="selectLeague" onChange={handleChange}>
+          <select className="form-control ml-2" name="selectLeague" onChange={handleChange} data-testid="premiumFeatures">
             <option value="">All</option>
             {leaguesOptions}
           </select>
