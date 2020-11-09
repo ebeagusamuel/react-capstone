@@ -15,6 +15,7 @@ const Highlight = ({ highlight }) => {
         <h5 className="card-title">
           {title}
         </h5>
+        <p className="card-text">{highlight.competition.name}</p>
         <p className="card-text">{`${timeAgo} ago`}</p>
         <Link to={`/highlights/${id}`} className="btn btn-primary">
           Watch highlight
@@ -30,6 +31,9 @@ Highlight.propTypes = {
     title: PropTypes.string,
     date: PropTypes.string,
     id: PropTypes.number,
+    competition: PropTypes.shape({
+      name: PropTypes.string,
+    }),
   }).isRequired,
 };
 

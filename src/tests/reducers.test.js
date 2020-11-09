@@ -10,7 +10,9 @@ describe('higlightsReducer', () => {
 
   test('updates the state accordingly', () => {
     const action = { type: 'highlights/setLeague', payload: 'CHAMPIONS LEAGUE' };
-    const expectedState = {"error": null, "highlights": [], "league": "CHAMPIONS LEAGUE", "status": "idle"};
+    const expectedState = {
+      error: null, highlights: [], league: 'CHAMPIONS LEAGUE', status: 'idle',
+    };
 
     expect(highlightsReducer(undefined, action)).toEqual(expectedState);
   });

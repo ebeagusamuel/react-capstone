@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLeague } from './highlightsSlice';
+import style from './Nav.module.css';
 import Logo from '../../assets/kick.svg';
 
 const Nav = () => {
@@ -27,7 +28,7 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-light bg-light justify-content-between px-5 py-3">
       <a href="/" className="navbar-brand">
-        <img src={Logo} alt="" />
+        <img className={style.logo} src={Logo} alt="" />
         SoccerHighlights
       </a>
       <div className="form-inline">
