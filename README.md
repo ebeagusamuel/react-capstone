@@ -2,7 +2,7 @@
 
 # SoccerHighlights 
 
-> SoccerHiglihts is an application in which you can watch video highlights of your favorite teams and soccer games.
+> SoccerHighlihts is an application in which you can watch video highlights of your favorite teams and soccer games.
 > <br>
 > The APP was created  using React.js and Redux Toolkit
 > <br>
