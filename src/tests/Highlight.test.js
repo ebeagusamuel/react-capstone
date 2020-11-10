@@ -46,5 +46,5 @@ test('it renders the Highlight component correctly', () => {
   )
 
   expect(screen.getByText('CA Central Cordoba - Defensa y Justicia')).toBeInTheDocument();
-  expect(screen.getByText('Watch highlight')).toBeInTheDocument();
+  expect(screen.getByText('Watch highlight')).toBeInTheDocument(); 
 });
