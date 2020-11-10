@@ -12,7 +12,8 @@ describe('The Nav component', () => {
     </Provider>,
   );
 
-  test('contains the text "SoccerHighlights', () => {
+  test('renders correctly and contains all the Nav elements', () => {
     expect(screen.getByText('SoccerHighlights')).toBeInTheDocument();
+    expect(screen.getByText('Select league')).toBeInTheDocument();
   });
 });
