@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -16,8 +15,9 @@ export const fetchHighlights = createAsyncThunk('highlights/fetchHighlights', as
     const date2 = new Date(new Date().setDate(new Date().getDate() - 1));
     return date2 > date1;
   }).map((highlight, index) => {
-    highlight.id = index + 1;
-    return highlight;
+    const x = highlight;
+    x.id = index + 1;
+    return x;
   });
   return modifiedData;
 });
@@ -27,20 +27,28 @@ const highlightsSlice = createSlice({
   initialState,
   reducers: {
     setLeague: (state, action) => {
-      state.league = action.payload;
+      const newState = state;
+      newState.league = action.payload;
+      return newState;
     },
   },
   extraReducers: {
     [fetchHighlights.pending]: state => {
-      state.status = 'loading';
+      const newState = state;
+      newState.status = 'loading';
+      return newState;
     },
     [fetchHighlights.fulfilled]: (state, action) => {
-      state.status = 'fulfilled';
-      state.highlights = action.payload;
+      const newState = state;
+      newState.status = 'fulfilled';
+      newState.highlights = action.payload;
+      return newState;
     },
     [fetchHighlights.rejected]: (state, action) => {
-      state.status = 'rejected';
-      state.error = action.error;
+      const newState = state;
+      newState.status = 'rejected';
+      newState.error = action.error;
+      return newState;
     },
   },
 });
