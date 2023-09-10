@@ -18,7 +18,7 @@
 - Users can click on the button on the game cards to be routed to a different page where they can watch the video highlight of that particular game.
 
 
-## This web app is live, you can check it here: [Live demo](http://soccer-highlights199.herokuapp.com/)
+## This web app is live, you can check it here: [Live demo](http://https://soccer-highlights199.netlify.app//)
 
 ## Screenshots of the app.
 
